@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category_name | capitalize }}{% endblock %}
+
+{% block content %}
+<style>
+    body{
+        margin-top: 200px;
+    }
+.container-bar {
+  color: #1D438E;
+  background-color: #FAFF00;
+  margin: 20px 310px 40px 310px;
+  align-items: center;    
+}
+
+.games-results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 0 80px; /* Adicionando margem nas laterais */
+    margin-bottom: 400px;
+}
+
+@media (max-width: 1200px) {
+    .games-results {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .games-results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .games-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+.game-card {
+    width: 100%; /* Para garantir que o card ocupe todo o espaço da coluna */
+    max-width: 300px; /* Definindo tamanho máximo dos cards */
+    margin: 0 auto; /* Centralizando os cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.game-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+
+</style>
+<body>
+    <div class="container-bar d-flex justify-content-around gap-4">
+        <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h2>Games in {{ category_name | capitalize }}</h2>
+        <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+    {% if games %}
+        <div class="games-results">
+            {% for game in games %}
+                <div class="game-card">
+                    <a href="{{ url_for('main.game', category_name=category_name, game_name=game) }}">
+                        <img src="{{ url_for('static', filename='games/' ~ category_name ~ '/' ~ game ~ '/cover.jpeg') }}" alt="{{ game | capitalize }} cover">
+                        <h3>{{ game | capitalize }}</h3>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Nenhum jogo encontrado nesta categoria.</p>
+    {% endif %}
+</body>
+{% endblock %}

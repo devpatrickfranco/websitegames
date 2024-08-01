@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}{{ game_info.title }}{% endblock %}
+
+{% block description %}{{ game_info.description_SEO }}{% endblock %}
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/game/game.css')}}">
+    <!-- Metatags para SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <meta name="description" content="{{ game_info.description_SEO }}">
+    <meta name="keywords" content="{{ game_info.keywords }}">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{ game_info.title }}">
+    <meta property="og:description" content="{{ game_info.description_SEO }}">
+    <meta property="og:url" content="{{ game_info.url }}">
+    <meta property="og:image" content="{{ url_for('main.game_files', category_name=category_name, game_name=game_name, filename=game_info.cover) }}">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ game_info.title }}">
+    <meta name="twitter:description" content="{{ game_info.description_SEO }}">
+    <meta name="twitter:url" content="{{ game_info.url }}">
+    <meta name="twitter:image" content="{{ url_for('main.game_files', category_name=category_name, game_name=game_name, filename=game_info.cover) }}">
+    {% endblock %}
+
+
+</head>
+<body>
+    <div class="ads">
+        <h1>ads</h1>
+    </div>
+    <!-- SIDEBAR AMARELA 1 -->
+    <div class="container-bar d-flex justify-content-around gap-4">
+        <!-- SVG BRASIL -->
+        <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+        <h2>{{ game_name | capitalize }}</h2>   
+        <!-- SVG BRASIL -->
+        <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <iframe src="{{ url_for('main.game_files', category_name=category_name, game_name=game_name, filename='index.html') }}" width="800" height="420"></iframe>
+
+    <div class="category-game no-hidden">
+        <h4 class="item-category-game"> 
+            <a href="/">Home</a> > 
+            <a href="{{ url_for('main.category', category_name=category_name) }}">{{ category_name | capitalize }}</a>
+        </h4>
+        <h2 class="item-category-game">{{ game_name | capitalize }}</h2>
+        <div class="rating-stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+    </div>
+
+    <div class="category-game">
+        <div class="item-category-game">
+            <p class="description-game">
+                {{ game_info.description_game }}
+            </p>
+        </div>
+        <div class="toggle-more">
+            <i class="bi bi-chevron-down show-more"></i>
+            <i class="bi bi-chevron-up show-less hidden"></i>
+        </div>
+    </div>
+    
+    <div class="ads-sidebar">
+        <h1>ADS</h1>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/game/showmore.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+{% endblock %}

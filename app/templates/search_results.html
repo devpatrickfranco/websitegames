@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin-top: 150px;
+    }
+.category-results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 400px;
+}
+
+.category-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.category-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+</style>
+<body>
+    <h1>Resultados da Busca</h1>
+    {% if results %}
+        <div class="category-results">
+            {% for category in results %}
+                <div class="category-card">
+                    <a href="{{ url_for('main.category', category_name=category) }}">
+                        <img src="{{ url_for('static', filename='games/' ~ category ~ '/cover.jpeg') }}" alt="{{ category | capitalize }} cover">
+                        <h3>{{ category | capitalize }}</h3>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Nenhuma categoria encontrada.</p>
+    {% endif %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,1072 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TESTE DO INDEX Home">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index/index.css') }}">
+</head>
+<body>
+
+    <!-- SIDEBAR AMARELA 1 -->
+    <div class="container-bar d-flex justify-content-around gap-4">
+    <!-- SVG BRASIL -->
+        <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+        <h1>Os Melhores Jogos online</h1>    
+    <!-- SVG BRASIL -->
+        <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!-- BODY CARROSEL -->
+    <div class="container-pai">
+        <!-- CARROSEL -->
+        <div class="carousel-container" ondragstart="return false;" oncontextmenu="return false;">
+            <div class="carousel">
+                <!-- IMG DO CARROSEL -->
+                <div class="carousel-item">
+                    <a href="{{ url_for('main.game', category_name='mario', game_name='MarioKart') }}" target="_blank">
+                        <img src="{{ url_for('static', filename='games/mario/MarioKart/cover.jpeg') }}" alt="Image 3" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome </p>
+                </div>
+                <!-- IMG DO CARROSEL -->
+                <div class="carousel-item">
+                    <a href="{{ url_for('main.game', category_name='Minecraft', game_name='Skyblock') }}" target="_blank">
+                        <img src="{{ url_for('static', filename='games/Minecraft/Skyblock/cover.jpeg') }}" alt="Image 3" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome </p>
+                </div>
+                <!-- IMG DO CARROSEL -->          
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/Homem Aranha.webp') }}" alt="Image 3" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome </p>
+                </div>
+                <!-- IMG DO CARROSEL -->          
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/Mario.webp') }}" alt="Image 4" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome </p>
+                </div>
+                <!-- IMG DO CARROSEL -->
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/MInecraft.webp') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome</p>
+                </div>
+                <!-- IMG DO CARROSEL -->
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/Naruto.webp') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome</p>
+                </div>
+                <!-- IMG DO CARROSEL -->          
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/Pikachu.webp') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome</p>
+                </div>
+                <!-- IMG DO CARROSEL --> 
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/Roblox.webp') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome</p>
+                </div>
+                <!-- IMG DO CARROSEL -->
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/Round 6.webp') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome</p>
+                </div>
+                <!-- IMG DO CARROSEL -->  
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/sonic.webp') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome</p>
+                </div>
+                <!-- IMG DO CARROSEL -->
+                <div class="carousel-item">
+                    <a href="https://chatgpt.com/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/1 - Os melhores jogos online/Subway surfs.webp') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+                    </a>
+                    <p class="carousel-item-name"> Espaço para nome</p>
+                </div>
+        </div>
+    </div>
+</div>    
+
+
+<div class="container-carrosel-triplo">
+    <div class="carrosel-triplo">
+        <div class="container-btn prev-btn-container">
+            <!-- Botão de navegação esquerda -->
+            <button class="btn btn-dark prev-btn" aria-label="Previous">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.854 1.646a.5.5 0 0 1 0 .708L4.707 8l6.147 6.146a.5.5 0 0 1-.708.708l-6.5-6.5a.5.5 0 0 1 0-.708l6.5-6.5a.5.5 0 0 1 .708 0z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="carrosle-triplo-container">
+            <!-- Incluir imagens dos slides -->
+            <div class="carousel-slide-triplo"><img src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 1" ondragstart="return false;" oncontextmenu="return false;"></div>
+            <div class="carousel-slide-triplo"><img src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 2" ondragstart="return false;" oncontextmenu="return false;"></div>
+            <div class="carousel-slide-triplo"><img src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 3" ondragstart="return false;" oncontextmenu="return false;"></div>
+            <div class="carousel-slide-triplo"><img src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 4" ondragstart="return false;" oncontextmenu="return false;"></div>
+            <div class="carousel-slide-triplo"><img src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;"></div>
+            <!-- Adicionar mais imagens conforme necessário -->
+        </div>
+        <div class="container-btn next-btn-container">
+            <!-- Botão de navegação direita -->
+            <button class="btn btn-dark next-btn" aria-label="Next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.646 1.646a.5.5 0 0 1 .708 0l6.5 6.5a.5.5 0 0 1 0 .708l-6.5 6.5a.5.5 0 0 1-.708-.708L11.293 8 5.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <div class="ads">
+        <h1>ADS</h1>
+    </div>
+        
+<!--  # as melhores categorias  -->
+    <!-- SIDEBAR AMARELA 2 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>As melhores categorias</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>
+        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>
+        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>
+        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>
+        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>
+        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+            <p class="carousel-item-name"> Espaço para nome</p>        </div>
+      </div>
+    </div>
+  </section>
+
+    <!--  # as melhores categorias  -->
+
+    <!--  # Mais Jogados  -->
+    <!-- SIDEBAR AMARELA 3 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Mais jogados</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!--  # Jogos de menina  -->
+    <!-- SIDEBAR AMARELA 4 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos de menina</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!--  # Jogos de Celular  -->
+    <!-- SIDEBAR AMARELA 5 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos de Celular</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+     <!--  # Jogos de Fazenda -->
+    <!-- SIDEBAR AMARELA 7 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos de Fazenda</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+       <!--  # Jogos de Famosos -->
+    <!-- SIDEBAR AMARELA 8 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos de Famosos</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!--  # Fireboy & Watergirl -->
+    <!--  SIDEBAR AMARELA 9 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Fireboy &  Watergirl</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!--  # Jogos de Carta -->
+    <!--  SIDEBAR AMARELA 10 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos de Carta</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+    
+    <div class="ads-sidebar">
+        <h1>ADS</h1>
+    </div>
+
+    <!--  # Jogos da Barbie -->
+    <!--  SIDEBAR AMARELA 11 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos da Barbie</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>]
+      <!--  # Jogos de Cozinha -->
+    <!--  SIDEBAR AMARELA 12 -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos de Cozinha</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!--  # Jogos de Carros -->
+    <!--  SIDEBAR AMARELA 13  -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos de Carros</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!--  # Jogos de Aleatorios -->
+    <!--  SIDEBAR AMARELA 14  -->
+    <div class="container-bar d-flex justify-content-center gap-4">
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+            <h1>Jogos de Carros</h1>    
+        <!-- SVG BRASIL -->
+            <img src="{{ url_for('static', filename='images/svg/flag_brazil.svg') }}" alt="">
+    </div>
+
+    <!------------------------------------------>
+    <div class="carossel-Slide" ondragstart="return false;" oncontextmenu="return false;">
+        <div class="item">
+            <a href="#" target="_blank">
+                <img  class="img-carrosel-categorias" src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="Image 5" ondragstart="return false;" oncontextmenu="return false;">
+            </a>
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+        <div class="item">
+            <img class="img-carrosel-categorias"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ads-sidebar">
+    <h1>ADS</h1>
+  </div>
+
+  <!-- JOGOS FOOTER -->
+
+  <div class="container-jogos-footer">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+  </div>
+
+  <div class="container-jogos-footer">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+  </div>
+
+  <div class="container-jogos-footer">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+  </div>
+
+  <div class="container-jogos-footer">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+    <img class="jogos-footer"  src="{{ url_for('static', filename='images/carrousel/BOTOX 1° REGIÃO 3.png') }}" alt="">
+  </div>
+
+  <div class="ads">
+    <h1>ADS</h1>
+  </div>
+
+  
+
+    <h2>Available Games</h2>
+    <ul>
+        <li><a href="{{ url_for('main.category', category_name='mario') }}">Mario Games</a></li>
+        <li><a href="{{ url_for('main.category', category_name='minecraft') }}">Minecraft Games</a></li>
+        <!-- Adicione mais jogos conforme necessário -->
+    </ul>        
+    
+
+
+    <script src="{{ url_for('static', filename='js/index/carrosel.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+{% endblock %}

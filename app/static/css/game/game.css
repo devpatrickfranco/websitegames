@@ -1,0 +1,110 @@
+body {
+    margin-top: 120px;
+}
+
+.ads {
+    width: 729px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    margin: 20px 310px 10px 310px;
+}
+
+.container-bar {
+    color: #1D438E;
+    background-color: #FAFF00;
+    margin: 20px 310px 10px 310px;
+  }
+
+  iframe {
+    display: block; /* Torna o iframe um bloco para aplicar margens */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border-radius: 10px;
+}
+.category-game {
+    display: flex;
+    flex-direction: column;
+    width: 729px;
+    border: solid 1px;
+    border-color: gray;
+    border-radius: 12px;
+    margin-left: 310px;
+    margin-top: 8px;
+    position: relative;
+}
+
+.category-game.no-hidden {
+    height: auto; /* Não limite a altura para a primeira categoria */
+}
+
+.item-category-game {
+    margin-left: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.description-game {
+    max-height: 90px; /* Limite a altura do parágrafo */
+    overflow: hidden; /* Oculta o overflow inicialmente */
+}
+
+.toggle-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 20px); /* Ajusta a largura para dar margem */
+    left: 10px; /* Adiciona margem à esquerda */
+    right: 10px; /* Adiciona margem à direita */
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, white 50%);
+    cursor: pointer;
+}
+
+.toggle-more .show-more,
+.toggle-more .show-less {
+    font-size: 24px;
+}
+
+.toggle-more .hidden {
+    display: none;
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -30px;
+    margin-right: 10px;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star:hover,
+.star.hovered {
+    color: #ffc107; /* Cor dourada ao passar o mouse */
+}
+
+.star.filled {
+    color: #ffc107; /* Cor dourada quando clicada */
+}
+
+.ads-sidebar {
+    width: 729px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    margin: 20px 310px 10px 310px;
+    
+}
+
